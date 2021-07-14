@@ -1,6 +1,6 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/linux,macos,vim,visualstudiocode,windows
-# Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,vim,visualstudiocode,windows
+# Created by https://www.toptal.com/developers/gitignore/api/linux,macos,vagrant,vim,visualstudiocode,windows
+# Edit at https://www.toptal.com/developers/gitignore?templates=linux,macos,vagrant,vim,visualstudiocode,windows
 
 ### Linux ###
 *~
@@ -45,6 +45,16 @@ Icon
 Network Trash Folder
 Temporary Items
 .apdisk
+
+### Vagrant ###
+# General
+.vagrant/
+
+# Log files (if you are creating logs in debug mode, uncomment this)
+*.log
+
+### Vagrant Patch ###
+*.box
 
 ### Vim ###
 # Swap
@@ -108,4 +118,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/linux,macos,vim,visualstudiocode,windows
+# End of https://www.toptal.com/developers/gitignore/api/linux,macos,vagrant,vim,visualstudiocode,windows

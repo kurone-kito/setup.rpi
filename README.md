@@ -8,6 +8,12 @@ Desktop environment preference for the Ubuntu for Raspberry Pi
 
 ## Playground
 
+The project has a virtual environment using the Vagrant with the Parallels.
+
+```sh
+vagrant up
+```
+
 ## License
 
 MIT
