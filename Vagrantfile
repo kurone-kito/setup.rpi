@@ -10,5 +10,13 @@ Vagrant.configure("2") do |config|
     prl.memory = 4096
     prl.name = "setup.rpi"
     prl.update_guest_tools = true
+    prl.customize [
+      "set", :id,
+      "--device-set", "cdrom0",
+      "--image", "/Applications/Parallels Desktop.app/Contents/Resources/Tools/prl-tools-lin-arm.iso",
+      "--connect"
+    ]
+    prl.customize ["set", :id, "--auto-share-bluetooth", "on"]
+    prl.customize ["set", :id, "--adaptive-hypervisor", "on"]
   end
 end
