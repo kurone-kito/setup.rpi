@@ -2,7 +2,7 @@
 # vi: set ft=ruby :
 
 Vagrant.configure("2") do |config|
-  config.vagrant.plugins = "vagrant-parallels"
+  config.vagrant.plugins = ["vagrant-parallels", "vagrant-reload"]
   config.vm.box = "simplyswimaustralia/parallels_m1_ubuntu20.10"
   config.vm.provider "parallels" do |prl|
     prl.cpus = 4
@@ -19,4 +19,9 @@ Vagrant.configure("2") do |config|
     prl.customize ["set", :id, "--auto-share-bluetooth", "on"]
     prl.customize ["set", :id, "--adaptive-hypervisor", "on"]
   end
+  config.vm.provision "shell", inline: "/vagrant/.setup/apt-upgrade.sh"
+  config.vm.provision :reload
+  config.vm.provision "shell", inline: "/vagrant/.setup/apt-dist-upgrade.sh"
+  config.vm.provision "shell", inline: "/vagrant/.setup/parallels.sh"
+  config.vm.provision :reload
 end
