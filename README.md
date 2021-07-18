@@ -8,6 +8,8 @@ Desktop environment preference for the Ubuntu for Raspberry Pi
 
 - run the `apt update` and `apt dist-upgrade` commands
   - on playground, includes reinstall the Parallels Guest Tools when post upgraded
+- install the Ubuntu upgrade tool
+  - Skip it on playground because the Parallels Guest Tools installation will fail.
 
 ## Playground
 

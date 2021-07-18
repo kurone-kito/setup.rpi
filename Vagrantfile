@@ -24,4 +24,12 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: "/vagrant/.setup/apt-dist-upgrade.sh"
   config.vm.provision "shell", inline: "/vagrant/.setup/parallels.sh"
   config.vm.provision :reload
+  config.vm.provision "shell", inline: "/vagrant/.setup/pre-migrate-ubuntu.sh"
+  config.vm.provision :reload
+  # config.vm.provision "shell", inline: "/vagrant/.setup/migrate-ubuntu.sh" # Not working the parallels guest tools on Ubuntu 21.04
+  # config.vm.provision "shell", inline: "/vagrant/.setup/parallels.sh"
+  # config.vm.provision :reload
+  # config.vm.provision "shell", inline: "/vagrant/.setup/migrate-ubuntu.sh -d"
+  # config.vm.provision "shell", inline: "/vagrant/.setup/parallels.sh"
+  # config.vm.provision :reload
 end
