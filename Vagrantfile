@@ -32,4 +32,7 @@ Vagrant.configure("2") do |config|
   # config.vm.provision "shell", inline: "/vagrant/.setup/migrate-ubuntu.sh -d"
   # config.vm.provision "shell", inline: "/vagrant/.setup/parallels.sh"
   # config.vm.provision :reload
+  config.vm.provision "shell", inline: "/vagrant/.setup/additional.sh"
+  config.vm.provision "shell", inline: "/vagrant/.setup/parallels.sh"
+  config.vm.provision :reload
 end

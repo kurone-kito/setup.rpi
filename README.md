@@ -10,6 +10,7 @@ Desktop environment preference for the Ubuntu for Raspberry Pi
   - on playground, includes reinstall the Parallels Guest Tools when post upgraded
 - install the Ubuntu upgrade tool
   - Skip it on playground because the Parallels Guest Tools installation will fail.
+- install the Ubuntu Desktop and some tools
 
 ## Playground
 
