@@ -35,5 +35,6 @@ Vagrant.configure("2") do |config|
   config.vm.provision "shell", inline: "/vagrant/.setup/additional.sh"
   config.vm.provision "shell", inline: "/vagrant/.setup/parallels.sh"
   config.vm.provision "shell", inline: "/vagrant/.setup/pref-desktop.sh vagrant"
+  config.vm.provision "shell", privileged: false, inline: "/vagrant/.setup/pref-desktop-user.sh vagrant"
   config.vm.provision :reload
 end
